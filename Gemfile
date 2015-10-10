@@ -24,6 +24,8 @@ gem 'owlcarousel-rails'
 # atomic gems
 gem 'materialize-sass'
 
+gem 'cancancan', '~> 1.10'
+
 group :development, :test do
   gem 'thin'
 
