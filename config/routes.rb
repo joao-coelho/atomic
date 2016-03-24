@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     resources :departments, only: [:show]
     resources :terms,       only: [:new, :create, :destroy]
   end
+  resources  :partners,     only: [:index, :show, :new, :create]
 
   get '/news' => 'welcome#news'
   get '/log' => 'welcome#log'

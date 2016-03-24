@@ -1,0 +1,15 @@
+<div class="container">
+  <h3>Parceiros</h3>
+  <hr>
+  <% if @partners.length != 0 then %>
+    <ul>
+
+    <% @partners.each do |partner| %>
+      <li><%= link_to @partner.name, partner_path(@partner) %>
+    <% end %>
+
+    </ul>
+  <% end %>
+  <hr>
+  <%= link_to "Criar Novo Parceiro", new_partner_path %>
+</div>

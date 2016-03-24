@@ -1,0 +1,20 @@
+<%= form_for :partner, url: partners_path do |b| %>
+  <div>
+    <%= b.label :name %><br/>
+    <%= b.text_field :name %>
+  </div>
+
+  <div>
+    <%= b.label :logo %><br>
+    <%= b.text_field :logo %>
+  </div>
+
+  <div>
+    <%= b.label :description %><br>
+    <%= b.number_field :type %>
+  </div>
+
+  <div>
+    <%= b.submit 'Criar Nova Parceiro' %>
+  </div>
+<% end %>
