@@ -4,7 +4,7 @@
 
   - if can? :create, Activity
     = link_to 'Criar Actividade', new_activity_path,
-      class: "btn btn-lg border-theme"
+      class: "btn btn-lg btn-create border-theme"
 
   - if @activities.empty?
     h4 Atividades não encontradas
