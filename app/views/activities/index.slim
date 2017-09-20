@@ -2,7 +2,7 @@
 .divide60
 .container.blog-left-img
 
-  - if can? :create, Activity
+  - if can_create?
     = link_to 'Criar Atividade', new_activity_path,
       class: "btn btn-lg border-theme"
     hr
