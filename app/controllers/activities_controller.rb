@@ -34,16 +34,16 @@ class ActivitiesController < ApplicationController
   end
 
   def destroy
-    @activity = Activity.find(params[:id]).try(:destroy)
-
+    Activity.find(params[:id]).try(:destroy)
     redirect_to activities_path
   end
 
   private
-    def activity_params
-      params.require(:activity).permit(:name, :location, :description,
-        :total_rating, :member_cost, :guest_cost, :start_date, :end_date,
-        :coffee_break, :poster, :department_id)
-    end
+
+  def activity_params
+    params.require(:activity).permit(:name, :location, :description,
+      :total_rating, :member_cost, :guest_cost, :start_date, :end_date,
+      :coffee_break, :poster, :department_id)
+  end
 
 end
