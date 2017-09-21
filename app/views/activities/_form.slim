@@ -2,7 +2,7 @@
 
   - if @activity.errors.any?
     div.alert class="alert-danger"
-      - @activity.errors.full_messages.each do |msg|
+      - error_messages(@activity).each do |msg|
         li
           = msg
 

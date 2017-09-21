@@ -14,7 +14,7 @@
         = simple_format(@activity.description, class: "lead")
         = render partial: "shared/activity/panel", object: @activity
         = link_to "Inscrever-me!",
-          ( activity_registration_path(@activity) != nil) ? activity_registration_path(@activity) : "#",
+          activity_registration_path(@activity) || "#",
           class: "btn btn-theme-dark btn-lg" + (@activity.end_date.past? ? " disabled": ""),
           target: "_blank"
     - else
