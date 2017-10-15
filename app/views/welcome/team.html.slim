@@ -13,7 +13,6 @@
 .col-md-12
   .divide80
   - @team.each do |department, members|
-
     .container
       .row
         .col-md-12
@@ -21,7 +20,6 @@
           .divide20
     .container
       .row
-        - members.each do |member|
-          - member.each do |name, info|
-            = render 'team_member', name: "#{name}", position: "#{info["position"]}",
-              image: "#{info["image"]}", github: "#", twitter: "#", linkedin: "#"
+        - members.each do |info|
+          = render 'team_member', name: info["name"], position: info["position"],
+            image: info["image"], github: "#", twitter: "#", linkedin: "#"

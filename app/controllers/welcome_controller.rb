@@ -12,7 +12,7 @@ class WelcomeController < ApplicationController
   end
 
   def team
-    @team = JSON.parse(File.read('public/team.json'))
+    @team = YAML.load_file('public/team.yml')
   end
 
   def partners
